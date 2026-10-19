@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Maps Scraper was removed</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%279%27 fill=%27%237250ba%27/%3E%3Cg transform=%27translate%288 8%29 scale%281.7143%29%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%271.4%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M7 7.6S9.6 5.4 9.6 3.6a2.6 2.6 0 0 0-5.2 0C4.4 5.4 7 7.6 7 7.6z%27/%3E%3Cpath d=%27M2 9.5h10%27/%3E%3Cpath d=%27M2 12.25h10%27/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="328e350f-b770-4529-9500-92b514123a6c"></script>
+<style>
+  :root {
+    --bg: oklch(16% 0.012 295); --sf: oklch(21% 0.014 295); --bd: oklch(34% 0.018 295);
+    --tx: oklch(91% 0.012 295); --mu: oklch(69% 0.018 295);
+    --ac: oklch(73% 0.13 295); --act: oklch(78% 0.11 295); --onac: oklch(19% 0.025 295);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg); color: var(--tx);
+    font: 17px/1.55 "Instrument Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-synthesis: none; -webkit-font-smoothing: antialiased;
+  }
+  .shell { max-width: 640px; margin: 0 auto; padding: 56px 24px 80px; }
+
+  .brand { display: flex; align-items: center; gap: 13px; margin-bottom: 36px; }
+  .mark {
+    width: 40px; height: 40px; border-radius: 22%; flex: 0 0 auto;
+    background: var(--ac); color: var(--onac); display: grid; place-items: center;
+  }
+  .brand b { font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+
+  fieldset { border: 0; padding: 0; min-width: 0; }
+  legend { padding: 0; }
+  .lbl { display: block; font-size: 14px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--act); }
+
+  .options { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .opt {
+    position: relative; display: flex; align-items: center; gap: 12px;
+    border: 1px solid var(--bd); border-radius: 12px; background: var(--sf);
+    padding: 14px 16px; font-size: 16.5px; cursor: pointer;
+  }
+  .opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .dot { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--mu); flex: 0 0 auto; }
+  .opt input:checked + .dot { border: 6px solid var(--ac); }
+  .opt input:focus-visible + .dot { outline: 2px solid var(--act); outline-offset: 3px; }
+  .opt:has(input:checked) { border-color: var(--ac); }
+
+  .q2 { margin-top: 28px; }
+  textarea {
+    display: block; margin-top: 14px; width: 100%; min-height: 96px; resize: vertical;
+    border: 1px solid var(--bd); border-radius: 12px; background: var(--sf); color: var(--tx);
+    padding: 13px 16px; font: 16px/1.5 "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  }
+  textarea::placeholder { color: var(--mu); }
+  textarea:focus { outline: 2px solid var(--ac); outline-offset: 1px; border-color: var(--ac); }
+
+  .send {
+    margin-top: 24px; appearance: none; border: 0; padding: 14px 28px; border-radius: 12px;
+    background: var(--ac); color: var(--onac); font: 700 17px/1.2 "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+    cursor: pointer;
+  }
+  .send:focus-visible { outline: 2px solid var(--tx); outline-offset: 3px; }
+
+  .thanks { display: none; }
+  .thanks h2 { font-size: 26px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700; }
+  body[data-sent="true"] form { display: none; }
+  body[data-sent="true"] .thanks { display: block; }
+
+  .note { margin-top: 28px; font-size: 14px; color: var(--mu); }
+  .note a { color: var(--act); }
+
+  @media (max-width: 720px) { .shell { padding: 32px 16px 64px; } }
+</style>
+</head>
+<body>
+  <main class="shell">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7.6S9.6 5.4 9.6 3.6a2.6 2.6 0 0 0-5.2 0C4.4 5.4 7 7.6 7 7.6z"/><path d="M2 9.5h10"/><path d="M2 12.25h10"/></svg></span>
+      <b>Google Maps Scraper</b>
+    </div>
+
+    <form id="feedback">
+      <fieldset>
+        <legend class="lbl">Why did you remove it?</legend>
+        <div class="options">
+          <label class="opt"><input type="radio" name="reason" value="It collected fewer places than I needed"><span class="dot"></span><span>It collected fewer places than I needed</span></label>
+          <label class="opt"><input type="radio" name="reason" value="It found too few emails"><span class="dot"></span><span>It found too few emails</span></label>
+          <label class="opt"><input type="radio" name="reason" value="It got stuck or collected nothing"><span class="dot"></span><span>It got stuck or collected nothing</span></label>
+          <label class="opt"><input type="radio" name="reason" value="I got my list and don’t need it anymore"><span class="dot"></span><span>I got my list and don’t need it anymore</span></label>
+        </div>
+      </fieldset>
+
+      <label class="lbl q2" for="details">Anything else?</label>
+      <textarea id="details" name="details" placeholder="Optional — what happened, or what you expected…"></textarea>
+
+      <button class="send" type="submit">Send feedback</button>
+    </form>
+
+    <div class="thanks" role="status"><h2>Thank you. Every answer counts.</h2></div>
+
+    <p class="note">The places you collected were stored only in your browser and were deleted with the extension. Prefer a conversation? <a href="https://github.com/anastasialekasova-hub/google-maps-scraper-pages/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.</p>
+  </main>
+
+<script>
+  // Responses land in the Google Form "Google Maps Scraper uninstall".
+  // Filled in by forms_create.py (pages-publisher, mode form); empty = submit sends
+  // nothing and still shows the thank-you state.
+  var FORM_ID = '';
+  var ENTRY_REASON = '';
+  var ENTRY_DETAILS = '';
+
+  document.getElementById('feedback').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var reason = (document.querySelector('input[name="reason"]:checked') || {}).value || '';
+    var details = document.querySelector('textarea[name="details"]').value.trim();
+
+    if (FORM_ID && (reason || details)) {
+      var data = new FormData();
+      if (ENTRY_REASON && reason) data.append(ENTRY_REASON, reason);
+      if (ENTRY_DETAILS && details) data.append(ENTRY_DETAILS, details);
+      fetch('https://docs.google.com/forms/d/e/' + FORM_ID + '/formResponse',
+        { method: 'POST', mode: 'no-cors', body: data }).catch(function () {});
+    }
+    document.body.dataset.sent = 'true';
+  });
+</script>
+</body>
+</html>
