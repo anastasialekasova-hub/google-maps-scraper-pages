@@ -35,32 +35,15 @@
   h1 em { font-style: normal; color: var(--act); }
   .lede { margin-top: 12px; font-size: 18px; color: var(--mu); max-width: 56ch; }
 
-  .step { margin-top: 34px; }
-  .step h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700; }
-  .step > p { margin-top: 8px; color: var(--mu); max-width: 58ch; }
-
-  /* Annotated pictures break out of the text column so the UI reads big. */
+  /* One real screenshot, reduced so it and the button fit in a 1280×800 window. */
   .shot {
-    position: relative; margin-top: 16px; border-radius: 14px; overflow: hidden;
+    position: relative; margin: 26px auto 0; border-radius: 14px; overflow: hidden;
     border: 1px solid var(--bd); box-shadow: 0 18px 50px rgba(0,0,0,.4); background: #fff;
-    width: min(94vw, 1000px);
-    left: 50%; transform: translateX(-50%);
+    width: min(100%, 560px);
   }
   .shot img { display: block; width: 100%; height: auto; }
 
-  .notes { margin-top: 44px; display: flex; flex-direction: column; gap: 14px; }
-  .nt {
-    background: var(--sf); border: 1px solid var(--bd); border-radius: 14px; padding: 20px 22px;
-    display: flex; flex-wrap: wrap; align-items: center; gap: 22px;
-  }
-  .nt p { flex: 1 1 300px; color: var(--mu); }
-  .nt strong { color: var(--tx); font-weight: 600; }
-  .dlg {
-    flex: 0 0 auto; display: block; width: 320px; max-width: 100%; height: auto;
-    border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.35);
-  }
-
-  .cta-block { margin-top: 52px; text-align: center; }
+  .cta-block { margin-top: 26px; text-align: center; }
   .cta {
     display: inline-flex; align-items: center; gap: 10px; padding: 16px 30px; border-radius: 13px;
     background: var(--ac); color: var(--onac); font-weight: 700; font-size: 19px; text-decoration: none;
@@ -76,8 +59,7 @@
   @media (max-width: 720px) {
     .shell { padding: 24px 16px 64px; }
     h1 { font-size: 26px; }
-    .shot { width: 100%; left: 0; transform: none; }
-    .dlg { width: 100%; }
+    .cta { display: flex; justify-content: center; }
   }
 </style>
 </head>
@@ -89,38 +71,10 @@
     </div>
 
     <h1>Google Maps Scraper is installed. Turn any Maps search into a <em>CSV or Excel file</em>.</h1>
-    <p class="lede">Chrome hides new extensions behind the puzzle icon — pin it first.</p>
+    <p class="lede">Search Google Maps for a type of business and a place, like “dentists in London”. The panel opens next to the results — press Start collecting.</p>
 
-    <section class="step">
-      <div class="shot">
-        <img src="step-1-2-pin.png" width="2000" height="640" alt="Chrome toolbar: 1 — click the puzzle icon to open the Extensions menu, 2 — click the pin next to Google Maps Scraper to keep its icon on the toolbar.">
-      </div>
-    </section>
-
-    <section class="step">
-      <h2>Search Google Maps, then press Start</h2>
-      <p>Search for a type of business in a place, like “dentists in London”. The panel appears over the map — press Start collecting, and it scrolls through the results for you.</p>
-      <div class="shot">
-        <img src="step-3-start.png" width="2000" height="1200" alt="Google Maps search for dentists in London with the Google Maps Scraper panel over the map; 3 — the Start collecting button.">
-      </div>
-    </section>
-
-    <section class="step">
-      <h2>Export the list</h2>
-      <p>When it’s done, you’ll see how many places it collected. Download them as a CSV or Excel file — name, address, phone, website, email, rating and more.</p>
-      <div class="shot">
-        <img src="step-4-export.png" width="2000" height="1120" alt="The panel shows 120 places collected; 4 — the Export CSV and Export Excel buttons, next to the exported file opened as a table.">
-      </div>
-    </section>
-
-    <div class="notes">
-      <div class="nt">
-        <p><strong>About emails.</strong> The first time you press Start, Chrome asks once for access to all websites. The extension needs it to find emails on company websites. If you click Deny, you still get the list, just without emails.</p>
-        <img class="dlg" src="email-permission.png" width="640" height="410" alt="Chrome permission dialog: “Google Maps Scraper” requests additional permissions — read and change all your data on all websites, with Deny and Allow buttons.">
-      </div>
-      <div class="nt">
-        <p><strong>Google Maps already open?</strong> Tabs you opened before installing work right away — no need to reload them.</p>
-      </div>
+    <div class="shot">
+      <img src="maps-panel.png" width="1120" height="809" alt="Google Maps search for dentists in Austin, TX with the Google Maps Scraper panel next to the results; the arrow points to the Start collecting button.">
     </div>
 
     <div class="cta-block">
@@ -128,7 +82,7 @@
     </div>
 
     <footer>
-      <p>Questions or a bug? <a href="https://github.com/anastasialekasova-hub/google-maps-scraper-pages/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>. · <a href="https://pinwisp.com/google-maps-scraper/privacy/">Privacy policy</a></p>
+      <p>Questions or a bug? <a href="https://github.com/anastasialekasova-hub/google-maps-scraper-pages/issues" target="_blank" rel="noopener">Open an issue on GitHub</a> · <a href="https://pinwisp.com/google-maps-scraper/privacy/">Privacy policy</a></p>
       <p>Not affiliated with Google LLC. Google Maps is a trademark of Google LLC.</p>
     </footer>
   </main>
